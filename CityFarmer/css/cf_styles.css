@@ -1,0 +1,60 @@
+@font-face {
+	font-family: 'arbutus';
+	src: url('../fonts/arbutus-regular-webfont.woff') format('woff'),
+		 url('../fonts/arbutus-regular-webfont.woff2') format('woff2');
+}
+#outerwrapper {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+} 
+
+body {
+	background-color: #B8D1EB;
+	color: #000000;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+main {
+	background-color: #C5A98B;
+	padding: 10px;
+}
+.floatleft { 
+float: left;
+margin-right: 3%;
+}
+
+.floatright {
+float: right;
+margin-left: 3%;
+}
+
+main, footer { 
+clear: both;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+h1 {
+	font-family: 'Merienda', Georgia, cursive;
+	font-size: xx-large;
+}
+
+h2 {
+	font-family: 'arbutus', Georgia, cursive;
+	font-weight: normal;
+	font-style: italic;
+}
+
+main ul {
+	list-style-image: url('../images/tomato.png');
+}
+
+footer {
+	font-size: .75em;
+	text-align: center;
+	background-color: rgb(128, 150, 0);
+	padding: 10px;
+}
