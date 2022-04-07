@@ -1,0 +1,85 @@
+/* Style Sheet If You Build It (table), They Will Come */
+/* Name: Jake Miller (and Same Ames 4/7/2022                                        */
+
+/* Gradient target HTML body element tag */
+#backdrop{
+    background-image: linear-gradient(to right, rgba(0, 74, 74, 0.7), rgba(65, 0, 65, 0.559),rgba(0, 74, 0, 0.953)); 
+}
+
+/* css target tableStyle class in HTML */
+.tableStyle {
+    text-align: left;
+    width: 100%;
+    border: 3px solid black;
+    padding:5px 1px;
+    background-color: rgba(240, 248, 255, 0.5);
+    box-shadow: rgba(255,255,255,.5) 0px 0px 15px;
+    text-shadow: rgba(240, 248, 255, 0.828) 0px 0px 10px;
+}
+/* css target HTML Table caption tag */
+caption {
+    font-size: x-large;
+    font-weight: bold;
+    color:black;
+    text-shadow: rgba(255, 255, 255, 0.754) 0px 1px 15px;
+}
+th, tr, td {
+    text-align: left;
+    border: 1px solid black;
+}
+
+tfoot tr td {
+    text-align: center;
+}
+
+.purple {
+    background-color: rgba(69, 15, 100, 0.311);
+}
+.red {
+    background-color: rgba(178, 34, 34, 0.35);
+}
+.yellow {
+    background-color: rgba(255, 255, 0, 0.252);
+}
+.green { 
+    background-color: rgba(0, 128, 0, 0.245);
+}
+.blue {
+    background-color: rgba(0, 0, 255, 0.273);
+}
+/* css target HTML Table thead tag */
+thead {
+    font-weight: bold;
+    font-size: large;
+    background-color: whitesmoke;
+}
+ 
+ 
+/* css target HTML Table tfoot tag */
+ tfoot {
+     font-size:medium;
+     background-color: whitesmoke;
+ }
+ 
+ 
+/* Add a pseudo-class selector (page 320) */
+
+a:active {
+    color:yellow;
+}
+a:visited {
+    color:rgb(84, 2, 84);
+}
+a {
+    text-shadow: rgba(240, 248, 255, 0.828) 0px 0px 10px;
+}
+/* For example --  :nth-child(even)       */
+ 
+ 
+ 
+ 
+/* use colgroup */
+colgroup {
+    display: table-column-group;
+}
+/* Week 3, Wednesday Video Lesson Chapter 8 folder - Table Column Group, page 173 */
