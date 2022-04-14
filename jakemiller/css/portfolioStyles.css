@@ -1,0 +1,142 @@
+/* Jake Miller 3/15/2022 */
+
+@font-face {
+    font-family: 'sourcesanspro';
+    src: url("..//fonts/sourcesanspro-regular-webfont.woff") format('woff'),
+         url("../fonts/sourcesanspro-regular-webfont.woff2") format('woff2');
+}
+
+html {
+    margin: 0px 10% 10px;
+    border: none;
+    overflow: auto;
+    position:sticky;
+    background-color: darkblue;
+    height: 100%;  
+}
+
+body{
+    background-color: rgba(255, 255, 255, 0.672);
+    margin: 0% 10%;
+    font-family: 'Merriweather', serif, sans-serif;
+    overflow:inherit;
+    margin-bottom: 600px;
+}
+
+.border-box{
+    box-sizing: border-box;
+    height: 100%;
+}
+header{
+    text-align: center;
+    font-size: large;
+}
+
+header img {
+    float: left;
+    border-radius: 50%;
+    max-width: 10%;
+    border: none;
+}
+header p {
+    text-align: center;    
+    color: rgba(0, 0, 0, 0.511);
+    font-size: 20%;    
+    font-weight: lighter;
+    font-style: italic;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1{
+    text-align:center;
+    font-family: 'sourcesanspro', serif, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid #57b1dc;
+    margin-top: 30px;
+    color: inherit;
+}
+h1 a:link, h1 a:visited {
+    color:inherit;
+    background-color: transparent;
+    text-decoration: none;
+}
+h2{
+    color: black;
+    font-size: 1rem;    
+    text-align: center;
+}
+.about {
+    font-size: 3rem;
+}
+p{
+    text-align: left;
+    font-size: 1rem;
+    margin: 0px 10%;
+}
+
+nav ul{
+    background-color: #48A9A6;
+    text-decoration: none;
+}
+nav ul li{
+    list-style-type: none;
+    color:black;
+    display: inline;
+    padding-left: 4%;
+    text-decoration: none;
+}
+nav> ul> li:link, nav ul li:visited{
+    color: black;
+    text-decoration: none;
+}
+nav ul li:hover, nav ul li:active{
+    color: aliceblue;
+    text-decoration: none;
+}
+.top-pic{
+    float: right;
+    width: 20%;
+    height: auto;
+    padding: 0% 1%
+}
+.aboutpic{
+    width: 30%;
+    max-height: 10%;
+    margin: 1% 15%;
+    padding: 5%;
+    background-color: #48a9a649
+}
+caption{
+    font-weight: bold;
+}
+table{
+    border: 1px solid black;    
+    background-color: rgba(0, 0, 0, 0.033);
+    margin:0px 25%;
+}
+thead{
+    background-color: #D4B483;
+}
+td {
+    border: 1px solid black;    
+    background-color: rgba(99, 112, 114, 0.137);
+}
+tfoot{
+    column-span: none;
+}
+
+footer{    
+    display:flex;
+    margin-top: 50px;
+}
+
+footer a{
+    padding-left: 5px;
+}
+
+div.contact{
+    margin: 0px 10%;
+}
+.floatend{
+    clear: both;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- Jake Miller 3/15/2022-->
+<html lang="en">    
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Jake Miller Portfolio">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content ="Jake Miller">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Jake Miller</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/portfolioStyles.css">
+    </head>
+    <body class="border-box">    
+        <div class="background">  
+        <header><a href="index.html"><img src="image/circle.jpg" alt="Jake Miller"></a>
+        <h1><a href="index.html">Jake Miller</a></h1>         
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Job Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+        <h2>Questions and/or comments? Please fill out the form below.</h2>
+        <div class="contact">   
+            <fieldset>         
+            <form action="mailto:JakeMiller@my.cwi.edu?subject=Portfolio_Mail" enctype="text/plain" method="POST">    
+            <p><label for="name">First and last name: </label></p>
+                <input type="text" name="name" id="name"> <br><br>
+                <p>Who are you? Please select one.</p>
+            <select name="who" size="4">
+                <option>Employer</option>
+                <option>Classmate</option>
+                <option>Professor</option>
+                <option>Other</option>
+                </select><br><br>
+                <p>What is the nature of your message?</p>            
+            <label><input type="checkbox" name="nature_of_message" value="questions">Question(s)</label><br>
+            <label><input type="checkbox" name="nature_of_message" value="comments">Comment(s)</label><br><br>            
+            <p><label for="comment">Enter your comments/questions: </label></p>
+                <textarea name="comment" id="comment"></textarea>
+            
+            <p><input type="submit" value="Submit"></p>
+        </form>
+        </fieldset>
+        </div>
+        <hr>
+        </main>
+        <footer>
+            <p>Phone: <a href="tel:12085159777">(208)515-9777</a>
+            <br>Email: <a href="mailto:JakeMiller@my.cwi.edu">JakeMiller@my.cwi.edu</a></p>
+            <a href="https://www.linkedin.com/" target="_blank"><img src="image/linkedin.png" alt="linkedin"></a>
+            &nbsp;&nbsp;&nbsp;<a href="https://github.com/" target="_blank"><img src="image/github.png" alt="github"></a>
+        </footer>
+        </div>
+    </body>    
+</html>
