@@ -1,0 +1,81 @@
+/* Jake Miller 4/22/2022 */
+/******************************************************************************/
+/*        MOBILE BREAKPOINT                                                   */
+/******************************************************************************/
+body { 
+	background-color: #F5F5F5;
+    color: #3F2860;
+    font-family: Verdana, Arial, sans-serif;
+	background-image: url(../images/gymmobile.png);
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+
+header { 
+	background-color: #9BC1C2; 	
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+img {
+	display: none;
+}
+
+h1 { 
+	text-indent: 1em;
+    line-height: 400%; 
+}
+
+nav { 
+     font-weight: bold; 
+	 display: block;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+
+}
+
+footer { 
+	background-color: #9BC1C2; 
+    font-size: small;
+	text-align: center;
+	font-style: italic;
+}
+main ul {
+	list-style-image: url(../images/barbullet.png);
+	margin-left: 3em;
+}
+table.schedule {
+	border-collapse: collapse;
+	border: solid black 1px;
+	width: 100%;
+	margin-bottom: .5em;
+}
+tr td {
+	border: solid black 1px;
+	text-align: center;
+}
+
+/******************************************************************************/
+/*        TABLET BREAKPOINT                                                   */
+/******************************************************************************/
+@media screen and (min-width: 641px) {
+	header {		
+		background-image: url(../images/barheader.png);
+		display:block;
+	}
+	nav{
+		display: inline;
+	}
+	body {
+		background-image: none;
+		background-color: #f5f5f5;
+	}
+	img {
+		display:block;
+		height: 100%
+	}
+	}
