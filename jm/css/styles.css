@@ -1,0 +1,197 @@
+/* Jake Miller 5/3/2022 */
+@font-face {
+    font-family: 'husbandofthemillenium';
+    src: url(../fonts/husbandofthemillennium.woff), url(../fonts/husbandofthemillennium.woff2);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+/*Icon Fonts */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+/* Background Color Scheme */
+.thisblue{
+    background-color: #278AB0;
+}
+.bg-blue {
+    background-color: #1C4670;
+}
+.txt-blue{
+    color:#1C4670;
+}
+.bg-ivory{
+    background-color: #EAEAE0;
+}
+.bg-neon-green{
+    background-color: #1DC690;
+}
+.txt-neon-green{
+    color: #1DC690;
+}
+.bg-purple{
+    background-color: #5e0189fc;
+}
+.txt-purple{
+    color: #5e0189fc;
+}
+
+/* Font types */
+main {
+    font-family: 'husbandofthemillenium';
+    font-weight: bolder;
+}
+footer, .carousel, nav, button {
+    font-family: 'Electrolize', sans-serif;
+}
+
+/* header and Jumbotron styles */
+header {
+    padding: 5px !important;
+}
+i.bi-question-diamond, i.bi-question-diamond:visited{
+    font-size: 2.5em;
+    color:#EAEAE0;
+}
+i.bi-question-diamond:hover{
+    color: #1DC690;
+}
+
+header img.aurora{
+    max-height: 150px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0px 0px 25px #5e0189fc;
+    border-image: linear-gradient(to bottom right,  #1DC690, #5e0189);
+}
+.bg-aurora-grad{
+    animation: nav-trans 30s -15s infinite both;    
+    background-image: radial-gradient( #5e018952, #278AB0);  
+}
+.JMicon{
+    width: 60px;
+}
+.navbar-toggler{
+    background: linear-gradient(to bottom left, #1DC690, #5e0189);
+}
+.nav-border{
+    border-style: solid;
+    border-width: 3px;
+    border-image: linear-gradient(#5e0189, #1DC690);
+    border:#1C4670
+}
+.nav-link{
+    font-size: 1.5em;
+}
+
+/* Body styles */
+#portrait{
+    max-height: 360px;
+}
+#rachelnme{
+    max-height:420px;
+}
+.aurora-trans{
+    animation: nav-trans 30s infinite;
+}
+.side-trans{    
+    border-style: solid;
+    border-color: #1C4670;
+    border-width: 7px 0px;
+    background-image: radial-gradient(#eaeaea78, #2789b073);    
+    animation: nav-trans 15s infinite, aurora-border 30s infinite;
+}
+
+.max-thirty{
+    max-height: 30%;
+}
+
+.fill-white-space{
+    width:100%;
+    height:100%;
+}
+
+.box-shadow-3d{
+    box-shadow: 1px 1px 0px #999,
+                2px 2px 0px #999,
+                3px 3px 0px #999,
+                4px 4px 0px #999,
+                5px 5px 0px #999,
+                6px 6px 0px #999;
+}
+
+/* Carousel */
+
+.carousel-txt{   
+    border:2px solid #0054579d;
+    background-color: #eaeae070;
+    text-shadow: 1px 1px 2px #eaeae0;
+}
+div.carousel-caption a:link, div.carousel-caption a:visited{
+    color: #420060;
+    text-decoration: none;
+}
+.carousel img {
+    max-height: 500px;
+}
+
+/* Form */
+#inputTextArea{
+    min-height: 100px;
+}
+
+.input-group-text {
+    background-color: #2789b039;
+}
+.form-control:focus, textarea:focus-visible, .submit_btn:focus {
+    border-color: unset;
+    box-shadow: unset;
+    outline: unset;
+}
+.submit_btn {
+    border: 2px solid #EAEAE0;
+}
+input:focus, textarea:focus, input:hover, textarea:hover, input:active, textarea:active, input:visited, textarea:visited,input:focus-visible, textarea:focus-visible, .submit_btn:hover, .submit_btn:active, .submit_btn:focus{
+    border: 2px outset #1dc690 !important;
+    box-shadow: 0px 0px 10px #5e0189 !important;
+}
+
+/* Footer */
+footer a:link{
+    color: #1DC690;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: yellow;
+}
+footer img{
+    box-shadow: 0px 0px 2px #1DC690;
+    border: 2px solid rgba(255, 255, 255, 0.395);    
+}
+div>a>img.icon{
+    width: 52px;
+    height: 52px;
+}
+address.container {
+    max-width: 375px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Keyframes */
+@keyframes nav-trans {
+    0%{background-color: #1C4670;}
+    33%{background-color: #420060;}    
+    66%{background-color: #005457;}
+    100%{background-color: #1C4670;}
+    
+    /* 0%{background: linear-gradient(to bottom right, #1DC690, #5e0189)}
+    50%{background: linear-gradient(to bottom left, #5e0189, #1C4670)}
+    100%{background: linear-gradient(to bottom right, #1DC690, #5e0189)} */
+}
+@keyframes aurora-border {
+    0%{border-color: #005457;}
+    33%{border-color: #1C4670;}    
+    66%{border-color: #420060;}
+    100%{border-color: #005457;}
+}
