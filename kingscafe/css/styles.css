@@ -1,0 +1,128 @@
+/*********************************************************************
+***
+*Original Author:  Jake Miller                                  *
+*Date Created:    8/26/2022                                   *
+*Version:        1.0                                        *
+*Date Last Modified:     8/28/2022                         *
+*Modified by:          Jake Miller                                *
+*Modification log:                                  *
+
+        Version 0.0 - 08/26/2022 - File Created, basic background color scheme added, navbar designed.
+        Version 0.4 - 08/27/2022 - Colors and some font effects added to several other areas. Custom font called journal added.
+        Version 0.7 - 08/27/2022 - Main section added with background color, positioned after the fixed nav, began to have horizontal scrolling issue in main section space.
+        Version 0.9 - 08/28/2022 - Changed the main section to relative position to set up footer, adjusted max height of footer image.
+        Version 1.0 - 08/28/2022 - No change, ready to launch.
+
+***
+******************************************************************** */
+
+@font-face {
+    font-family: 'journal';
+    src: url(../fonts/journal-webfont.woff),
+         url(../fonts/journal-webfont.woff2);
+}
+
+.journal {
+    font-family: 'journal';
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.journalsmall {
+    font-family: 'journal';
+    font-size: 2rem;
+}
+/* Light Brown #D0B49F */
+.lightbrown{
+    background-color: #D0B49f;
+}
+/* Brown #AB6B51 */
+.brown{
+    background-color: #ab6b51;
+}
+/* Cornflower Blue #2F435A */
+.cornflower{
+    background-color: #2F435A;
+}
+/* lightBlue #39918C */
+.lightblue {
+    background-color: #39918C;
+}
+/* Dark Brown #523A28 */
+.dbrowntext{
+    color: #523A28;
+}
+
+.glow {    
+    border: 3px solid #39918C;
+    box-shadow: 0px 0px 10px #D0B49f
+}
+
+.alignCenter{
+    text-align: center;
+    font-weight: bold;
+}
+
+.see-through{
+    opacity: 98%;
+}
+
+.beans{
+    background-image: url(../images/warmbeans.jpg);
+    background-size: cover;
+}
+.beans2{
+    background-image: url(../images/beans2.jpg);
+    background-size: cover;
+}
+.KCico{
+    width: 80px;
+    vertical-align: middle;
+    border-style: none;    
+    border: 1px solid #39918c;
+    box-shadow: 0px 0px 5px #D0B49f;
+}
+
+.navtitle{
+    vertical-align: middle
+}
+.nav-border {
+    border: 2px solid #2F435A;
+    box-shadow:0px 0px 10px #D0B49f;
+}
+
+h1{
+    font-size: 4rem;
+    letter-spacing: 4px;
+    font-weight: 900;
+    font-family: 'journal', cursive;
+    background: #2F435A;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+    text-shadow: 1px 1px 1px #39918c;
+}
+.h1border{
+    padding: 0px 7px;
+    background: radial-gradient(#d0B49f, #ab6b51);
+    box-shadow: 0px 0px 10px #D0B49f
+}
+
+main{
+    width:auto;
+    position:relative;
+    top: 106px;
+}
+
+footer{
+    width:auto;
+    position: relative;
+    top: 50px;
+    
+}
+
+.footermax{
+    max-height: 200px;
+    display:block;
+    margin:auto;
+}
