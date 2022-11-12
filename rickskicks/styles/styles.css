@@ -1,0 +1,82 @@
+/*********************************************************************
+***
+*Original Author:  Jake Miller                                  *
+*Date Created:    11/08/2022                                   *
+*Version:        1.0                                       *
+*Date Last Modified:     11/12/2022                         *
+*Modified by:          Jake Miller                                *
+*Modification log:                                  *
+
+        Version 0.0 - 11/08/2022 - File Created, basic background color scheme added (c color and c color txt classes), navbar designed.
+        Version 0.8 - 11/11/2022 - borders for sections added, a few custom colors, and some card borders and shadows
+        Version 1.0 - 11/12/2022 - Social images designed.
+
+***
+******************************************************************** */
+
+.cblacktxt {
+  color: #020202;
+}
+.cblack {
+  background-color: #020202;
+}
+.cgreentxt {
+  color: #023618;
+}
+.cgreen {
+  background-color: #023618;
+}
+.cbluetxt {
+  color: #005c69;
+}
+.cblue {
+  background-color: #005c69;
+}
+.cpurpletxt {
+  color: #5e0035;
+}
+.cpurple {
+  background-color: #5e0035;
+}
+.cpurpledarker {
+  background-color: #5e003598;
+}
+.cpinktxt {
+  color: #950952;
+}
+.cpink {
+  background-color: #950952;
+}
+.card {
+  border: 2px solid #020202;
+  box-shadow: #020202 5px 5px 5px;
+}
+.cpinkglowtxt {
+  color: #d893b7;
+  text-shadow: #950952 0px 0px 3px;
+}
+.social {
+  border: 1px solid #5e0035;
+  box-shadow: #005c69 0px 0px 15px;
+}
+.sbutton {
+  padding-top: 32px;
+}
+
+.w-90 {
+  width: 90vw;
+}
+
+.blackxborder {
+  border: 5px solid #020202;
+  border-top: none;
+  border-bottom: none;
+}
+.blackyborder {
+  border: 5px solid #020202;
+  border-right: none;
+  border-left: none;
+}
+.blackborder {
+  border: 5px solid #020202;
+}
