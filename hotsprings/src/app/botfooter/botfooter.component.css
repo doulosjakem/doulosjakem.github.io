@@ -1,0 +1,7 @@
+img {
+    box-shadow: 5px 5px 20px black;
+}
+li:hover {
+    color: white;
+    text-shadow: 3px 3px 10px black;
+}

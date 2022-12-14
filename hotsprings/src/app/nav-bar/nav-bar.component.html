@@ -1,43 +1,36 @@
-<div>
-    <nav class="navbar navbar-expand-md HSdarkbluetxt HSlightblue sticky-top row text-center">
-        <div class="container-fluid">
-          <div class="col-4">
-            <a class="navbar-brand logostyle px-2 rounded" href="#">Hot Springs</a>          
+<nav class="navbar navbar-expand-md HSlightblue sticky-top row text-center">
+          <div class="col ms-2 ms-lg-0 col-lg-4 ">
+            <a routerLink="/" routerLInkActive="active" ariaCurrentWhenActive="page" class="navbar-brand logostyle px-2 rounded" href="/">Hot Springs</a>          
           </div>
-          <div class="col-4">
+          <div class="col col-lg-4 ">
             <img src="../../assets/hotspringmini.jpg" alt="" class="img-fluid rounded">
-        </div>
-        <div class="col-4 text-end pe-2">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="d-none d-md-inline" >
-            <ul class="navbar-nav text-end">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-            </ul>
           </div>
+          <div class="col col-lg-4 text-end me-2">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+          
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav HSdarkgreen HSneongreentxt rounded text-center">
+                <li class="nav-item">
+                  <a routerLink="/" routerLInkActive="active" ariaCurrentWhenActive="page" class="nav-link HSneongreentxt" >Home</a>
+                </li>
+                <li class="nav-item">  
+                  <a routerLink="/springs" routerLInkActive="active" ariaCurrentWhenActive="page" class="nav-link HSneongreentxt">Springs</a>
+                </li>
+                <li class="nav-item">
+                  <a routerLink="/locations" routerLInkActive="active" ariaCurrentWhenActive="page" class="nav-link HSneongreentxt">Locations</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a routerLink="/facts" routerLInkActive="active" ariaCurrentWhenActive="page" class="nav-link HSneongreentxt">Facts</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a routerLink="/about" routerLInkActive="active" ariaCurrentWhenActive="page" class="nav-link HSneongreentxt">About</a>
+                </li>
+              </ul>
+            </div>          
         </div>
-<div class="collapse navbar-collapse text-end-md" id="navbarNavDropdown">
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Features</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Pricing</a>
-    </li>
-  </ul>
-</div></div>
-      </nav>
-</div>
+</nav>

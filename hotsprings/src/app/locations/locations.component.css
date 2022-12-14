@@ -1,0 +1,13 @@
+.stairblur {    
+    background-image: url("../../assets/stairblur.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:scroll ;
+}
+.faded {    
+    background-color: #00735c8d;
+}
+.fadedblue {
+    background-color: #08313a7e;
+}

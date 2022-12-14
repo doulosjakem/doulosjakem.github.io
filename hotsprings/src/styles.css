@@ -67,3 +67,8 @@
     font-family: sans-serif;
   }
   
+a:hover  {
+  color: white;
+  text-shadow: 3px 3px 10px black;
+}
+  
