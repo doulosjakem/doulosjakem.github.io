@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+.HSwhite {
+    background-color: #edf0ee;
+  }
+  .HSwhitetxt {
+    color: #edf0ee;
+  }
+  .HSwhiteblue {
+    background-color: #e7f6fc;
+  }
+  .HSwhitebluetxt {
+    color: #e7f6fc;
+  }
+  .HSlightblue {
+    background-color: #a5cfe3;
+  }
+  .HSlightbluetxt {
+    color: #a5cfe3;
+  }
+  .HSwhiteblue {
+    background-color: #e7f6fc;
+  }
+  .HSwhitebluetxt {
+    color: #e7f6fc;
+  }
+  .HSteal {
+    background-color: #028476;
+  }
+  .HStealtxt {
+    color: #028476;
+  }
+  
+  .HSneongreen {
+    background-color: #5cd85a;
+  }
+  .HSneongreentxt {
+    color: #5cd85a;
+  }
+  .HSgray {
+    background-color: #606462;
+  }
+  .HSgraytxt {
+    color: #606462;
+  }
+  
+  .HSgreen {
+    background-color: #00735c;
+  }
+  .HSgreentxt {
+    color: #00735c;
+  }
+  .HSdarkgreen {
+    background-color: #00493a;
+  }
+  .HSdarkgreentxt {
+    color: #00493a;
+  }
+  .HSdarkblue {
+    background-color: #08313a;
+  }
+  .HSdarkbluetxt {
+    color: #08313a;
+  }
+  html,
+  body {
+    font-family: sans-serif;
+  }
+  
