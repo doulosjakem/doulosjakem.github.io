@@ -2,3 +2,8 @@
     background-color: #00493a;
     color: #5cd85a;
 }
+
+a:hover, a:active, a:visited {
+    color: white;
+    text-shadow: 3px 3px 10px black;
+}

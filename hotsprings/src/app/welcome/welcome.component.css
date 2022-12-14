@@ -1,0 +1,17 @@
+.blurredforest {
+    background-image: url("../../assets/blurredforest.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:scroll ;
+}
+.fadedgray { 
+    background-color: #00493a8f;
+}
+a:hover  {
+    color: white;
+    text-shadow: 3px 3px 10px black;
+}
+img:hover {
+box-shadow: 3px 3px 20px black;
+}

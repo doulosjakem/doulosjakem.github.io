@@ -1,0 +1,10 @@
+.sunriseback {    
+    background-image: url("../../assets/sunriseback.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:scroll ;
+}
+.faded {
+    background-color: #08313a9a;
+}
