@@ -1,0 +1,217 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>BreakBrick</title>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style type="text/css">
+        body {
+            margin-right: auto;
+            background-color: beige;
+        }
+        
+    </style>
+</head>
+<body class="container mx-auto">
+<div class="">
+    <h1 id="display"> Level</h1>
+</div>
+<script type="text/javascript">
+      var score = 0;
+      var level = 1;
+      var display = "Level: " + level + " | Score: "+ score;
+      function displayText() {
+        display = "Level: " + level + " | Score: "+ score;
+      $("#display").text(display);
+      };
+      displayText();
+
+      function updateScore() {
+        score += 32;
+        displayText();
+      };
+      function updateLevel() {
+        level += 1;
+        displayText();
+      };
+
+class BrickBreak extends Phaser.Scene
+{
+  
+    constructor ()
+    {
+        
+        super({ key: 'breakbrick' });
+
+        this.bricks;
+        this.player;
+        this.ball;
+    }
+
+    preload ()
+    {
+        this.load.image('sky', 'assets/sky.png');
+    this.load.image('ground', 'assets/platform.png');    
+    this.load.image('ceiling', 'assets/platform.png');
+    this.load.image('wall', 'assets/vplatform.png');
+    // this.load.image('star', 'assets/star.png');
+    // this.load.image('bomb', 'assets/bomb.png');
+    this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 64, frameHeight: 96 });
+    this.load.image('white1', 'assets/brick.png');    
+    this.load.image('teal1', 'assets/teal1.png');
+    this.load.image('blue1', 'assets/blue1.png');
+    this.load.image('green1', 'assets/green1.png');
+    this.load.image('purple1', 'assets/purple1.png');
+    this.load.image('purple2', 'assets/purple2.png');
+    this.load.image('red1', 'assets/red1.png');
+
+    this.load.image('ball1', 'assets/ball2.png');
+         
+    }
+
+    create ()
+    {
+        
+        this.add.image(400, 300, 'sky');
+        //  Enable world bounds, but disable the floor
+        this.physics.world.setBoundsCollision(true, true, true, false);
+
+        
+        this.bricks = this.physics.add.staticGroup({
+            key: 'purple2',
+            // 'purple2', 'purple1','blue1', 'teal1', 'green1'         
+            frame: [ 'red1','purple2', 'purple1','blue1', 'teal1', 'green1'],
+            frameQuantity: 10,
+            gridAlign: { width: 10, height: 6, cellWidth: 64, cellHeight: 32, x: 112, y: 100 }
+        });
+       
+        this.bricks.key = 'red1';
+      
+
+        this.ball = this.physics.add.image(400, 500, 'ball1').setCollideWorldBounds(true).setBounce(1);
+        this.ball.setData('onplayer', true);
+
+        this.player = this.physics.add.image(400, 550,  'dude').setImmovable();
+
+        //Level and score       
+        // var score = 0;
+        // var level = 1;   
+        // var gameText;      
+        // var gameText = this.add.text(16, 16, display, { fontSize: '32px', fill: '#000' })
+
+        //  Our colliders
+        this.physics.add.collider(this.ball, this.bricks, this.hitBrick, null, this);
+        this.physics.add.collider(this.ball, this.player, this.hitplayer, null, this);        
+   
+
+        //  Input events
+        this.input.on('pointermove', function (pointer)
+        {
+
+            //  Keep the player within the game
+            this.player.x = Phaser.Math.Clamp(pointer.x, 52, 748);
+
+            if (this.ball.getData('onplayer'))
+            {
+                this.ball.x = this.player.x;
+            }
+
+        }, this);
+
+        this.input.on('pointerup', function (pointer)
+        {
+
+            if (this.ball.getData('onplayer'))
+            {
+                this.ball.setVelocity(-75, -300);
+                this.ball.setData('onplayer', false);
+            }
+
+        }, this);
+    }
+
+    hitBrick (ball, brick)
+    {      
+        updateScore();
+        
+        brick.disableBody(true, true);
+        
+
+        if (this.bricks.countActive() === 0)
+        {
+            updateLevel();
+            this.resetLevel();
+        }
+    }
+
+    resetBall ()
+    {
+        this.ball.setVelocity(0);
+        this.ball.setPosition(this.player.x, 500);
+        this.ball.setData('onplayer', true);
+    }
+
+    resetLevel ()
+    {
+        this.resetBall();
+
+        this.bricks.children.each(brick =>
+        {
+
+
+            brick.enableBody(false, 0, 0, true, true);
+
+        });
+    }
+
+    hitplayer (ball, player)
+    {
+        let diff = 0;
+
+        if (ball.x < player.x)
+        {
+            //  Ball is on the left-hand side of the player
+            diff = player.x - ball.x;
+            ball.setVelocityX(-10 * diff);
+        }
+        else if (ball.x > player.x)
+        {
+            //  Ball is on the right-hand side of the player
+            diff = ball.x - player.x;
+            ball.setVelocityX(10 * diff);
+        }
+        else
+        {
+            //  Ball is perfectly in the middle
+            //  Add a little random X to stop it bouncing straight up!
+            // ball.setVelocityX(2 + Math.random() * 8);
+        }
+    }
+
+    update ()
+    {
+        if (this.ball.y > 600)
+        {
+            this.resetBall();
+        }
+    }
+}
+
+const config = {
+    type: Phaser.WEBGL,
+    width: 800,
+    height: 600,
+    parent: 'phaser-example',
+    scene: [ BrickBreak ],
+    physics: {
+        default: 'arcade'
+    }
+};
+
+const game = new Phaser.Game(config);
+</script>
+</body>
+</html>
